@@ -8,4 +8,4 @@ Charlie Weissman\
 Kanalu Monaco\
 David Enders\
 Advisor: Prof. Chris Stone\
-Liaison: John Benediktsson\
+Liaison: John Benediktsson
