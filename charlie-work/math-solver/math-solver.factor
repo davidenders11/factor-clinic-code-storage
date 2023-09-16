@@ -7,12 +7,12 @@ IN: math-solver
 : op? ( char -- bool ) { 43 45 42 47 } in? ;
 
 : gettype ( x x -- )
-    num? [ . ] [ . ] if ;
+    num? [ ] [ ] if ;
 
-: mathsolver ( x -- x x )
+: mathsolver ( x x -- x x )
     dup
     "+-*/" split .
     swap
     ;
 
-: putonstack ( x -- ) ;
+: putonstack ( -- ) ;
