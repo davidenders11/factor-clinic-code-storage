@@ -2,9 +2,9 @@
 Storing code for intermediary work done for the 2023-2024 Factor clinic team
 
 # Team Members:
-Limnanthes Serafine\
+Limnanthes Serafina\
 Eli Pregerson\
-Charlie Weissman\
+Charlie Weismann\
 Kanalu Monaco\
 David Enders\
 Advisor: Prof. Chris Stone\
