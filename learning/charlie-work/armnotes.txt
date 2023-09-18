@@ -1,0 +1,12 @@
+r3 is always used to store variables before they are pushed onto the stack
+things are accessed on the stack, mutated in register, then replaced on the stack
+    ldr -> OPERATIONS -> str
+if comparison is reversed; instead of if COND then body, if not COND skip body
+loop comparison happens in a separate section (L2) from the loop body (L4) and the increment (L3)
+return is in r0
+exact amount of stack necessary to hold variables allocated before program
+frame pointer (fp) stored on stack before program and restored after
+
+ARM COMPILER INSTALLATION/USE MACOS:
+brew install arm-none-eabi-gcc
+arm-none-eabi-gcc test.c -S
