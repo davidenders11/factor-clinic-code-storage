@@ -2,8 +2,12 @@
 ! See https://factorcode.org/license.txt for BSD license.
 USING: accessors kernel math math.functions arrays 
        bit-arrays sequences sequences.private slots
-       prettyprint ;
+       prettyprint io io.files io.encodings.utf8 
+       splitting math.parser formatting namespaces ;
 IN: cachesim
+
+SYMBOL: verbose
+verbose [ f ] initialize 
 
 TUPLE: pLRU numsets treelen treearray ;
 TUPLE: cacheline tag valid dirty ;
@@ -141,6 +145,47 @@ TUPLE: cachesim numways numsets taglen setlen offsetlen ways pLRU ;
 : print-ways ( cachesim setnum -- cachesim )
     [ dup ways>> ] dip swap ?nth . ;
 
+
+: simulate-non-addr-line ( cachesim line -- cachesim ) 
+    0 swap ?nth dup 
+    [ [ "BEGIN" = ] [ "TRAIN" = ] bi or [ invalidate clear-pLRU ] when ] [ drop ] if ;
+
+: print-mismatch ( result line -- )
+   swap [ [ 0 swap ?nth ] [ 2 swap ?nth ] bi ] dip
+   "Result mismatch at address %s. Logfile: %s, Sim: %s\n" printf ;
+
+: access-success ( result line verbose? -- )
+    [ nip "Line %[%s, %] succeeded\n" printf ]
+    [ 2drop ] if ;
+
+: access-and-compare ( cachesim line -- cachesim )
+    [ [ 0 swap ?nth hex> ] 
+      [ 1 swap ?nth [ "W" = ] [ "A" = ] bi or ] bi 
+      cache-access ] keep 
+    2dup 2 swap ?nth = 
+    [ verbose get access-success ]
+    [ print-mismatch ] if ;
+
+: simulate-addr-line ( cachesim line -- cachesim ) 
+    dup 1 swap ?nth dup "F" = 
+        [ 2drop flush ] 
+        [ "I" = 
+        [ drop invalidate ]
+        [ access-and-compare ] if ] if ;
+
+: simulate-inner-loop ( cachesim line -- cachesim ) 
+    [ 32 = ] trim " " split 
+    dup length 3 < 
+        [ simulate-non-addr-line ]
+        [ simulate-addr-line ] if ;
+
+: simulate ( numways numsets addrlen taglen filename -- )
+    [ <cachesim> ] dip utf8 [ [ simulate-inner-loop ] each-line ] with-file-reader drop ;
+
 : example-addr ( -- addr ) 0x80011cac ;
 : example-set ( -- setnum ) 50 ;
 : example-cachesim ( -- cachesim ) 4 64 56 44 <cachesim> ; 
+: example-logfile ( -- filename ) "work/cachesim/ICache.log" ;
+: example-mini-logfile ( -- filename ) "work/cachesim/ICachemini.log" ;
+: example-simulation ( -- ) 4 64 56 44 example-logfile simulate ;
+: example-mini-simulation ( -- ) 4 64 56 44 example-mini-logfile simulate ;
