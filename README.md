@@ -2,7 +2,7 @@
 Storing code for intermediary work done for the 2023-2024 Factor clinic team
 
 # Team Members:
-Limnanthes Serafina\
+Limnanthes Serafini\
 Eli Pregerson\
 Charlie Weismann\
 Kanalu Monaco\
