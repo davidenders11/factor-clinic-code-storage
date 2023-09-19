@@ -12,17 +12,17 @@ David Enders\
 Advisor: Prof. Chris Stone\
 Liaison: John Benediktsson
 
+# Terminal Commands:
+
+- Build Factor on ARM64: `arch -x86_64 ./build.sh update`
+- Convert assembly code to object code: `as hello.s -o hello.o`
+- Create ARM64 executable from object code: `` ld hello.o -o hello -l System -syslibroot `xcrun -sdk macosx --show-sdk-path` -e _main -arch arm64 ``
+
 # Useful links:
-
-[Guided tour of Factor](https://docs.factorcode.org/content/article-tour.html)
-
-[Concatenative Wiki](https://concatenative.org/wiki/view/Factor/)
 
 [ARM Simulator](http://163.238.35.161/~zhangs/arm64simulator/)
 
 [Chromium System Call Table](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md)
-
-[ARM Assembly VSCode extension](https://marketplace.visualstudio.com/items?itemName=dan-c-underwood.arm)
 
 [Apple System Calls](https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master)
 
