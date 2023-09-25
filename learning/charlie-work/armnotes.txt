@@ -10,3 +10,5 @@ frame pointer (fp) stored on stack before program and restored after
 ARM COMPILER INSTALLATION/USE MACOS:
 brew install arm-none-eabi-gcc
 arm-none-eabi-gcc test.c -S
+
+NOTE: I believe this may be ARM32
