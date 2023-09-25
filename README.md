@@ -27,3 +27,5 @@ Liaison: John Benediktsson
 [Apple System Calls](https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master)
 
 [Pretty Good ARM Hello World Tutorial](https://www.youtube.com/watch?v=d0OXp0zqIo0)
+
+[GDB to LLDB command mapping](https://lldb.llvm.org/use/map.html)
