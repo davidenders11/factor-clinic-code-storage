@@ -9,16 +9,23 @@
 { "Hugh Jackman" "Christian Bale" "Scarlett Johansson" }
 movie boa`, where `boa` means "by order of arguments" and is a simple way to initialize instance variables wihout specifying which is which
 - [Combinators](https://docs.factorcode.org/content/vocab-combinators.html) can help to avoid stack shuffling
-- DevFlow:
-  - Can type `"palindrome" edit` and VSCode will open and edit that vocabulary or `\ palindrome? edit` to edit a specific word
-  - Create a new project: `"project-name" scaffold-work`
-  - Create testing file for project: `"project-name" scaffold-tests`
-  - Create docs for project: `"project-name" scaffold-docs`
-  - Hit `ctrl+t` instead of `enter` in the Listener to time a function's execution (or use the `time` word in your code)
-  - `ctrl+p` goes back a command, `ctrl+n` goes forward one
-  - Use the `lint` vocab (`"vocab-to-lint" lint-vocab`) to lint something
-  - Use `\ some-word see` to look at the definition for some word you want to examine
-  -
+
+# DevFlow
+
+- Can type `"palindrome" edit` and VSCode will open and edit that vocabulary or `\ palindrome? edit` to edit a specific word
+- Create a new project: `"project-name" scaffold-work`
+- Create testing file for project: `"project-name" scaffold-tests`
+- Create docs for project: `"project-name" scaffold-docs`
+- Hit `ctrl+t` instead of `enter` in the Listener to time a function's execution (or use the `time` word in your code)
+- `ctrl+p` goes back a command, `ctrl+n` goes forward one
+- Use the `lint` vocab (`"vocab-to-lint" lint-vocab`) to lint something
+- Use `\ some-word see` to look at the definition for some word you want to examine
+
+# Useful functions
+
+- Apply a quotation to everything in an array: `map`
+- Partially apply to everything in array: `curry`
+-
 
 # Links
 
