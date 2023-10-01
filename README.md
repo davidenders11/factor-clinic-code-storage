@@ -22,13 +22,15 @@ Liaison: John Benediktsson
 
 [ARM Simulator](http://163.238.35.161/~zhangs/arm64simulator/)
 
-[Chromium System Call Table](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md)
-
-[Apple System Calls](https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master)
-
 [Pretty Good ARM Hello World Tutorial](https://www.youtube.com/watch?v=d0OXp0zqIo0)
 
 [GDB to LLDB command mapping](https://lldb.llvm.org/use/map.html)
+
+[Factor FAQ](https://concatenative.org/wiki/view/Factor/FAQ)
+
+["Learning Factor" (a bunch of good resources for Factor learning)](https://useless-factor.blogspot.com/2008/01/learning-factor.html)
+
+[Stack Shufflers and more Tutorial](https://elasticdog.com/2008/12/beginning-factor-shufflers-and-combinators/)
 
 # Important File Locations
 
