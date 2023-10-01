@@ -29,3 +29,8 @@ Liaison: John Benediktsson
 [Pretty Good ARM Hello World Tutorial](https://www.youtube.com/watch?v=d0OXp0zqIo0)
 
 [GDB to LLDB command mapping](https://lldb.llvm.org/use/map.html)
+
+# Important File Locations
+
+- [`factor/factor-unmaintained/cpu/arm/architecture`](https://github.com/factor/factor-unmaintained/tree/main/cpu/arm/architecture) (links to unmaintained part of the ARM32 compiler where ARM32 words are defined in Factor)
+- [`factor/factor/basis/CPU/arm/32/assembler`](https://github.com/factor/factor/tree/master/basis/cpu/arm/32/assembler) (links to assembler that turns Factor ARM into real ARM)
