@@ -32,6 +32,8 @@ Liaison: John Benediktsson
 
 [Stack Shufflers and more Tutorial](https://elasticdog.com/2008/12/beginning-factor-shufflers-and-combinators/)
 
+[Digging Into the Compiler Blog Post](http://www.phildawes.net/blog/2008/04/08/digging-into-factors-compiler/)
+
 # Important File Locations
 
 - [`factor/factor-unmaintained/cpu/arm/architecture`](https://github.com/factor/factor-unmaintained/tree/main/cpu/arm/architecture) (links to unmaintained part of the ARM32 compiler where ARM32 words are defined in Factor)
