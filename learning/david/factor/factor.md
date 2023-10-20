@@ -29,7 +29,6 @@ movie boa`, where `boa` means "by order of arguments" and is a simple way to ini
 
 - Apply a quotation to everything in an array: `map`
 - Partially apply to everything in array: `curry`
--
 
 # Links
 
